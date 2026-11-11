@@ -95,7 +95,6 @@ function fecharConta(comanda) {
   const desconto = calcularDesconto(subtotal);
   const total = calcularTotal(comanda);
 
-  console.log("---------------------");
   console.log(`Subtotal: ${reais.format(subtotal / 100)}`);
   console.log(`Taxa de serviço (${TAXA_SERVICO}%): ${reais.format(servico / 100)}`);
   console.log(`Desconto: -${reais.format(desconto / 100)}`);
@@ -125,7 +124,3 @@ console.assert(calcularDesconto(8000) === 0, "Erro: R$ 80,00 exatos não deveria
 // 6. Teste desconto acima de R$ 80,00 e total final (R6)
 console.assert(calcularDesconto(8800) === 500, "Erro: Acima de R$ 80,00 deveria ter desconto de 500");
 console.assert(calcularTotal(comanda) === 9180, "Erro: Total final deveria ser 9180");
-
-console.log(filtrarAtivos())
-console.log(fecharConta(comanda))
-console.log(calcularSubtotal(comanda))
